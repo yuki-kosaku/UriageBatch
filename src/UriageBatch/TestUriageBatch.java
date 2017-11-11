@@ -9,7 +9,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import dao.UriageBatchDriverManeger;
+import businessEntity.dao.UriageBatchDriverManeger;
 
 public class TestUriageBatch {
 	

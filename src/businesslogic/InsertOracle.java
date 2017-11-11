@@ -5,7 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 
-import dao.UriageBatchDriverManeger;
+import businessEntity.dao.UriageBatchDriverManeger;
 
 public class InsertOracle {
 

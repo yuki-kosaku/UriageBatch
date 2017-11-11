@@ -1,4 +1,4 @@
-package dao;
+package businessEntity.dao;
 
 public enum ConnectionStrings {
 

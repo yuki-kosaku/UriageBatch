@@ -1,4 +1,4 @@
-package dao;
+package businessEntity.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
