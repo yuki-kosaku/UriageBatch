@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import businessEntity.dao.UriageBatchDriverManeger;
+import businessEntity.dao.DaoConnectionDriverManeger;
 
 public class SelectOracle {
 
@@ -13,7 +13,7 @@ public class SelectOracle {
 	private Statement stmt = null;
 	private ResultSet rset = null;
 
-	private UriageBatchDriverManeger dm = new UriageBatchDriverManeger();
+	private DaoConnectionDriverManeger dm = new DaoConnectionDriverManeger();
 
 	public void selectTSaleTran() throws Exception {
 

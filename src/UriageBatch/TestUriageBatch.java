@@ -9,7 +9,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import businessEntity.dao.UriageBatchDriverManeger;
+import businessEntity.dao.DaoConnectionDriverManeger;
 
 public class TestUriageBatch {
 	
@@ -19,7 +19,7 @@ public class TestUriageBatch {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		
-		UriageBatchDriverManeger dm = new UriageBatchDriverManeger();  
+		DaoConnectionDriverManeger dm = new DaoConnectionDriverManeger();  
 
 		// Connectionの作成
 		conn = dm.getConnection();

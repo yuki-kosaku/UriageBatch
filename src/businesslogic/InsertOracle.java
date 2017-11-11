@@ -5,7 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 
-import businessEntity.dao.UriageBatchDriverManeger;
+import businessEntity.dao.DaoConnectionDriverManeger;
 
 public class InsertOracle {
 
@@ -13,7 +13,7 @@ public class InsertOracle {
 	private Statement stmt = null;
 	private PreparedStatement ps = null;
 
-	private UriageBatchDriverManeger dm = new UriageBatchDriverManeger();
+	private DaoConnectionDriverManeger dm = new DaoConnectionDriverManeger();
 
 	public void insertUriageTran(String sql, int seqTSaleTran, String inclusionYMD, String voucherNo, String ProductCd, int sales ) throws Exception
 	{

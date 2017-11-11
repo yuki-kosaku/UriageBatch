@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 
-public class UriageBatchDriverManeger {
+public class DaoConnectionDriverManeger {
 
 	Connection conn = null;
 	Statement stmt = null;
