@@ -6,6 +6,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
 
+import businessEntity.dao.InsertT_SALE_TRAN;
+import businessEntity.dto.T_SALE_TRAN;
+
 public class ReadCsv {
 
 	public void readUriageCsv() throws Exception
@@ -15,33 +18,32 @@ public class ReadCsv {
 
 			BufferedReader br = new BufferedReader(new FileReader(csv));
 
-			InsertOracle insertOracle = new InsertOracle();
 			SelectOracle selectOracle = new SelectOracle();
+			InsertT_SALE_TRAN insertTSaleTran = new InsertT_SALE_TRAN();
+			T_SALE_TRAN tSaleTran = new T_SALE_TRAN();
 
 			// 最終行まで読み込む
 			String line = "";
-			String inclusionYMD = selectOracle.selectTSystemInfo();
-			int seqTSaleTran = 0;
+			tSaleTran.INCLUSION_YMD = selectOracle.selectTSystemInfo();
 			while ((line = br.readLine()) != null) {
 
 				// 1行をデータの要素に分割
 				StringTokenizer st = new StringTokenizer(line, ",");
 
-
-				String voucherNo = "";
-				String ProductCd = "";
-				int sales = 0;
-				seqTSaleTran = selectOracle.seqTranUri();
+				tSaleTran.VOUCHER_NO = "";
+				tSaleTran.PRODUCT_CD = "";
+				tSaleTran.SALES = 0;
+				tSaleTran.SEQ_T_SALE_TRAN = selectOracle.seqTranUri();
 
 				while (st.hasMoreTokens()) {
 					// 1行の各要素をタブ区切りで表示
 
-					voucherNo =	st.nextToken();
-					ProductCd = st.nextToken();
-					sales = Integer.parseInt(st.nextToken());
+					tSaleTran.VOUCHER_NO =	st.nextToken();
+					tSaleTran.PRODUCT_CD = st.nextToken();
+					tSaleTran.SALES = Integer.parseInt(st.nextToken());
 				}
 
-				insertOracle.insertUriageTran("INSERT INTO T_SALE_TRAN values(?, ?, ?, ?, ?)", seqTSaleTran, inclusionYMD, voucherNo, ProductCd, sales);
+				insertTSaleTran.insertTSaleTran(tSaleTran);
 			}
 			br.close();
 

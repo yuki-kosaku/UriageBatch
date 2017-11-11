@@ -15,54 +15,6 @@ public class InsertOracle {
 
 	private DaoConnectionDriverManeger dm = new DaoConnectionDriverManeger();
 
-	public void insertUriageTran(String sql, int seqTSaleTran, String inclusionYMD, String voucherNo, String ProductCd, int sales ) throws Exception
-	{
-		try {
-			// Connectionの作成
-			conn = dm.getConnection();
-
-			//オートコミットはオフにする。
-			conn.setAutoCommit(false);
-
-			// Statementの作成
-			stmt = conn.createStatement();
-
-			ps = conn.prepareStatement(sql);
-			ps.setInt(1, seqTSaleTran);
-			ps.setString(2, inclusionYMD);
-			ps.setString(3, voucherNo);
-			ps.setString(4, ProductCd);
-			ps.setInt(5, sales);
-
-			//INSERT文を実行する
-			int result = ps.executeUpdate();
-
-			//処理件数を表示する
-			System.out.println("結果：" + result);
-
-			//コミット
-			conn.commit();
-		} catch (Exception e) {
-			conn.rollback();
-			throw e;
-		} finally {
-			try {
-				/* クローズ処理 */
-				if (stmt != null) {
-					stmt.close();
-					stmt = null;
-				}
-
-				if (conn != null) {
-					conn.close();
-					conn = null;
-				}
-			} catch (Throwable e) {
-				// nop
-			}
-		}
-	}
-
 	public void insertUriage(String sql, String voucherNo, int salesAmount ) throws Exception
 	{
 		try {

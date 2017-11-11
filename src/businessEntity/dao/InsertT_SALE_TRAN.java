@@ -5,9 +5,9 @@ import java.sql.SQLException;
 import businessEntity.dto.T_SALE_TRAN;;
 
 public class InsertT_SALE_TRAN extends DaoConnectionDriverManeger{
-	private static final String insertSql = "INSERT INTO T_USER values(?, ?, ?, ?, ?)";
+	private static final String insertSql = "INSERT INTO T_SALE_TRAN values(?, ?, ?, ?, ?)";
 
-	public void insertUserTable(T_SALE_TRAN tSaleTran)  throws SQLException {
+	public void insertTSaleTran(T_SALE_TRAN tSaleTran)  throws SQLException {
 		try {
 			ps = conn.prepareStatement(insertSql);
 			ps.setInt(1, tSaleTran.SEQ_T_SALE_TRAN);
