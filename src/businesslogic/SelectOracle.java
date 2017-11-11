@@ -5,6 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import dao.UriageBatchDriverManeger;
+
 public class SelectOracle {
 
 	private Connection conn = null;

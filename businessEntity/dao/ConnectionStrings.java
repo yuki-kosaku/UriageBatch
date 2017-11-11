@@ -1,4 +1,4 @@
-package businesslogic;
+package dao;
 
 public enum ConnectionStrings {
 
