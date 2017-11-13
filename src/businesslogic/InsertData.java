@@ -9,7 +9,7 @@ import java.sql.Statement;
 import businessEntity.dao.DaoConnectionDriverManeger;
 import businessEntity.dao.InsertT_STOCK;
 
-public class InsertOracle {
+public class InsertData {
 
 	private Connection conn = null;
 	private Statement stmt = null;

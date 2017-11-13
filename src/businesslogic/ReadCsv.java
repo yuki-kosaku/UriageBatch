@@ -100,7 +100,7 @@ public class ReadCsv {
 
 			BufferedReader br = new BufferedReader(new FileReader(csv));
 
-			InsertOracle insertOracle = new InsertOracle();
+			InsertData insertOracle = new InsertData();
 			SelectOracle selectOracle = new SelectOracle();
 
 			// 最終行まで読み込む

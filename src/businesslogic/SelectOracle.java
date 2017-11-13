@@ -17,7 +17,7 @@ public class SelectOracle {
 
 	public void selectTSaleTran() throws Exception {
 
-		InsertOracle insertOracle = new InsertOracle();
+		InsertData insertOracle = new InsertData();
 
 		try {
 			// Connectionの作成

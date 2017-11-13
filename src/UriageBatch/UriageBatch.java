@@ -1,6 +1,6 @@
 package UriageBatch;
 
-import businesslogic.InsertOracle;
+import businesslogic.InsertData;
 import businesslogic.ReadCsv;
 import businesslogic.SelectOracle;
 
@@ -9,7 +9,7 @@ public class UriageBatch {
 	public static void main(String[] args)
 	{
 		try {
-			InsertOracle insertOracle = new InsertOracle();
+			InsertData insertOracle = new InsertData();
 
 			// 前日の在庫をコピー
 			insertOracle.copyTStock();
