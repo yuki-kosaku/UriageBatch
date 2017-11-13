@@ -56,7 +56,7 @@ public class ReadCsv {
 
 			BufferedReader br = new BufferedReader(new FileReader(csv));
 
-			SelectOracle selectOracle = new SelectOracle();
+			SelectData selectOracle = new SelectData();
 			InsertT_SALE_TRAN insertTSaleTran = new InsertT_SALE_TRAN();
 			T_SALE_TRAN tSaleTran = new T_SALE_TRAN();
 
@@ -101,7 +101,7 @@ public class ReadCsv {
 			BufferedReader br = new BufferedReader(new FileReader(csv));
 
 			InsertData insertOracle = new InsertData();
-			SelectOracle selectOracle = new SelectOracle();
+			SelectData selectOracle = new SelectData();
 
 			// 最終行まで読み込む
 			String line = "";

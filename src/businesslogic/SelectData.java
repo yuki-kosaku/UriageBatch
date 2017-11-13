@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 import businessEntity.dao.DaoConnectionDriverManeger;
 
-public class SelectOracle {
+public class SelectData {
 
 	private Connection conn = null;
 	private Statement stmt = null;

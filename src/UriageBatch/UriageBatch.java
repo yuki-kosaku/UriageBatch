@@ -2,7 +2,7 @@ package UriageBatch;
 
 import businesslogic.InsertData;
 import businesslogic.ReadCsv;
-import businesslogic.SelectOracle;
+import businesslogic.SelectData;
 
 public class UriageBatch {
 
@@ -21,7 +21,7 @@ public class UriageBatch {
 			// 仕入CSVを読み込む
 			readCsv.readShiireCsv();
 
-			SelectOracle selectOracle = new SelectOracle();
+			SelectData selectOracle = new SelectData();
 
 			// 本日の売上をトランテーブルから取得し売上と売上明細に登録
 			selectOracle.selectTSaleTran();
