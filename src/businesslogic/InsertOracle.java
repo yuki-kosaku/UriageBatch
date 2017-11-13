@@ -158,7 +158,7 @@ public class InsertOracle {
 		}
 	}
 
-	public void copyZaiko() throws SQLException
+	public void copyTStock() throws SQLException
 	{
 		InsertT_STOCK insertTStock = new InsertT_STOCK();
 		

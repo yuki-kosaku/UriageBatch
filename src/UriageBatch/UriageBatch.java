@@ -12,7 +12,7 @@ public class UriageBatch {
 			InsertOracle insertOracle = new InsertOracle();
 
 			// 前日の在庫をコピー
-			insertOracle.copyZaiko();
+			insertOracle.copyTStock();
 
 			ReadCsv readCsv = new ReadCsv();
 
