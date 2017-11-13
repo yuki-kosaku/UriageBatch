@@ -7,7 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import businessEntity.dao.DaoConnectionDriverManeger;
+import businessEntity.dao.InsertT_SALE_TRAN;
 import businessEntity.dao.InsertT_STOCK;
+import businessEntity.dto.T_SALE_TRAN;
 
 public class InsertData {
 
@@ -17,6 +19,13 @@ public class InsertData {
 
 	private DaoConnectionDriverManeger dm = new DaoConnectionDriverManeger();
 
+	public void inserTSaleTran(T_SALE_TRAN tSaleTran) throws SQLException {
+		InsertT_SALE_TRAN insertTSaleTran = new InsertT_SALE_TRAN();
+
+		insertTSaleTran.insertTSaleTran(tSaleTran);
+	}
+	
+	
 	public void insertUriage(String sql, String voucherNo, int salesAmount ) throws Exception
 	{
 		try {
