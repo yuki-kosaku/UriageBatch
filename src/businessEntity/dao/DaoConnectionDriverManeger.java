@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class DaoConnectionDriverManeger {
 
 	Connection conn = null;
-	Statement stmt = null;
+	static Statement stmt = null;
 	PreparedStatement ps = null;
 
 	@SuppressWarnings("finally")
