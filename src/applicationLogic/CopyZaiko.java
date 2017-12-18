@@ -13,3 +13,4 @@ public class CopyZaiko {
 		insertData.copyTStock();
 	}
 }
+

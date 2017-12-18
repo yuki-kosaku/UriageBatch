@@ -2,7 +2,7 @@ package businessEntity.dao;
 
 public enum ConnectionStrings {
 
-	USER("CSC_USER"), PASS("CSC_USER"), SERVER_NAME("localhost"), SID("XE");
+	USER("CSC_USERS"), PASS("csc-users"), SERVER_NAME("localhost"), SID("XE");
 
 	 private String value;
 

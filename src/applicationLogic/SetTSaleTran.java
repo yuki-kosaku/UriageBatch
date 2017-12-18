@@ -7,16 +7,16 @@ import businessEntity.dto.T_SALE_TRAN;
 import businesslogic.InsertData;
 import businesslogic.ReadCsv;
 
-public class SetUriageTran {
+public class SetTSaleTran {
 
-	public void setUriageTran() throws SQLException {
+	public void setTSaleTran() throws SQLException {
 		ReadCsv readCsv = new ReadCsv();
 
 		// 売上伝票CSVを読み込む
 		ArrayList<ArrayList<String>> csvDatas = readCsv.readCsv("C:\\TEMP\\URIAGE.csv");
 
 		InsertData insertData = new InsertData();
-		
+
 		for (ArrayList<String> csvData : csvDatas) {
 			T_SALE_TRAN tSaleTran = new T_SALE_TRAN();
 
@@ -25,8 +25,9 @@ public class SetUriageTran {
 			tSaleTran.VOUCHER_NO = csvData.get(2);
 			tSaleTran.PRODUCT_CD = csvData.get(3);
 			tSaleTran.SALES = Integer.parseInt(csvData.get(4));
-			
+
 			insertData.inserTSaleTran(tSaleTran);
 		}
 	}
 }
+

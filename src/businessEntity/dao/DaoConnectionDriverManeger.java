@@ -8,16 +8,22 @@ import java.sql.Statement;
 public class DaoConnectionDriverManeger {
 
 	Connection conn = null;
-	static Statement stmt = null;
+	protected static Statement stmt = null;
 	PreparedStatement ps = null;
 
+	public DaoConnectionDriverManeger()
+	{
+		this.getConnection();
+	}
 	@SuppressWarnings("finally")
 	public Connection getConnection() {
-		Connection conn = null;
+		conn = null;
 
 		try {
 			// JBBCドライバクラスのロード
 			Class.forName("oracle.jdbc.driver.OracleDriver");
+
+			System.out.println("aaa");
 
 			// Connectionの作成
 			conn = DriverManager.getConnection(
@@ -33,3 +39,4 @@ public class DaoConnectionDriverManeger {
 		}
 	}
 }
+
